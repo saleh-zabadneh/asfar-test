@@ -30,11 +30,16 @@ export default tseslint.config(
       '@typescript-eslint': tseslint.plugin,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      'prettier': prettierPlugin,
+      prettier: prettierPlugin,
     },
     rules: {
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-unused-vars': 'off',
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
       'prettier/prettier': 'error',
       // Add other rules from your .eslintrc.js here
     },
