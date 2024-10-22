@@ -1,5 +1,6 @@
 import { Payment, columns, DataTable } from '@/components/data-table';
 import ModernForm from './payment-form';
+import PaymentCharts from './payment-charts';
 
 function generateRandomData(count: number): Payment[] {
   const statuses: Payment['status'][] = [
@@ -47,6 +48,7 @@ const data: Payment[] = generateRandomData(1000);
 export default function PaymentsPage() {
   return (
     <div className="container py-10 mx-auto">
+      <PaymentCharts />
       <DataTable columns={columns} data={data} />
       <ModernForm />
     </div>
